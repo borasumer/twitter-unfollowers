@@ -1,0 +1,17 @@
+html
+  head
+    title Unfollowers
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+  body
+    div.row  
+      div.col-md-6.col-md-offset-3
+        h1.text-center Unfollowers List
+        ul.list-group
+          each user in users
+            a.list-group-item(href="https://twitter.com/" + user.screen_name)
+              img(src=user.avatar)
+              span=user.name
+              span=' @'
+              span=user.screen_name 
+              div.container.justify-content-center.ml-5
+                input.btn.btn-primary(type="button", value="Visit the profile!")

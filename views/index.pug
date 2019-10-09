@@ -1,0 +1,11 @@
+html
+  head
+    title Unfollowers
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin="anonymous")
+  body
+    div.row  
+      div.col-md-6.col-md-offset-3
+        h1.text-center  Search for Unfollowers !
+        form(action="get_users", method="POST")
+          input.form-control(type="text", name="handle", placeholder="Enter your username")
+          input.form-control.btn.btn-primary(type="submit", value="See Unfollowers!")
